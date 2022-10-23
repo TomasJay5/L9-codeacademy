@@ -20,6 +20,7 @@ class ProductFactory extends Factory
     {
         return [
             'is_active' => fake()->boolean(),
+            'category_id' => ProductCategory::factory(),
             'name' => fake()->words(3, true),
             'description' => fake()->text(200),
             'stock' => fake()->numberBetween(1, 10)

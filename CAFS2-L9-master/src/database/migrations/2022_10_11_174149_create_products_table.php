@@ -18,6 +18,8 @@ return new class extends Migration
 
             $table->boolean('is_active')->default(FALSE);
 
+            $table->string('category_id');
+
             $table->unsignedTinyInteger('stock')->default(0);
 
             $table->string('name');

@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/count', [Controllers\Products\ProductController::class, 'count']);
+
+Route::get('/categories', [Controllers\Products\ProductController::class, 'categories']);
+
+Route::get('/byname', [Controllers\Products\ProductController::class, 'byName']);
+
+Route::get('/transactions', [Controllers\Products\ProductController::class, 'transactions']);
